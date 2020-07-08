@@ -41,7 +41,7 @@ public class BasePage {
 	
 	public Properties initProperties(){
 		prop = new Properties();
-		String path = "/Users/sezerertugrul/Documents/automationbootcamp/HubSpotAppTestNG_POM/src/main/java/com/qa/hubspot/config/config.properties";
+		String path = "/Users/sezerertugrul/git/HubSpotApp/HubSpotAppTestNG_POM/src/main/java/com/qa/hubspot/config/config.properties";
 		
 		try {
 			FileInputStream ip = new FileInputStream(path);      //

@@ -12,6 +12,7 @@ import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.pages.LoginPage;
 
 public class LoginPageTest {
+	
 	WebDriver driver;
 	BasePage basePage;
 	Properties prop;
