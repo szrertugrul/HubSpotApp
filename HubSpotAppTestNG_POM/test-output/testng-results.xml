@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44142" started-at="2020-07-15T21:02:22Z" finished-at="2020-07-15T21:03:06Z">
+  <suite name="Default suite" duration-ms="34661" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44142" started-at="2020-07-15T21:02:22Z" finished-at="2020-07-15T21:03:06Z">
-      <class name="com.qa.hubspot.tests.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@1bce4f0a]" name="setUp" is-config="true" duration-ms="21638" started-at="2020-07-15T21:02:22Z" finished-at="2020-07-15T21:02:43Z">
+    <test name="Default test" duration-ms="34661" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:44Z">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="setUp" is-config="true" duration-ms="5693" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@1bce4f0a]" name="verifyHomePageTitleTest" duration-ms="689" started-at="2020-07-15T21:02:43Z" description="Verify Home Page Title" finished-at="2020-07-15T21:02:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageTitleTest -->
-        <test-method status="FAIL" signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.hubspot.tests.HomePageTest@1bce4f0a]" name="verifyHomePageHeaderTest" duration-ms="20108" started-at="2020-07-15T21:02:44Z" description="Verify Home Page Header" finished-at="2020-07-15T21:03:04Z">
+        <test-method status="FAIL" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="loginTest" duration-ms="28719" started-at="2020-07-15T22:15:15Z" description="valid username and password for the login page" finished-at="2020-07-15T22:15:44Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Dashboard Library] but found [null]]]>
+              <![CDATA[expected [7TP LLC] but found [null]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Dashboard Library] but found [null]
+              <![CDATA[java.lang.AssertionError: expected [7TP LLC] but found [null]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at com.qa.hubspot.tests.HomePageTest.verifyHomePageHeaderTest(HomePageTest.java:52)
+at com.qa.hubspot.tests.LoginPageTest.loginTest(LoginPageTest.java:55)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,16 +55,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageHeaderTest -->
-        <test-method status="PASS" signature="verifyLoggedInUserTest()[pri:3, instance:com.qa.hubspot.tests.HomePageTest@1bce4f0a]" name="verifyLoggedInUserTest" duration-ms="1299" started-at="2020-07-15T21:03:04Z" description=" Verify Account Name" finished-at="2020-07-15T21:03:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoggedInUserTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@1bce4f0a]" name="tearDown" is-config="true" duration-ms="351" started-at="2020-07-15T21:03:05Z" finished-at="2020-07-15T21:03:06Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="tearDown" is-config="true" duration-ms="216" started-at="2020-07-15T22:15:44Z" finished-at="2020-07-15T22:15:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

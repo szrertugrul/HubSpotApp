@@ -36,8 +36,7 @@ public class LoginPageTest {
 	}
 	
 	@Test(priority=1,description="get page title as HubSpot Login", enabled=true)
-	public void verifyPageTitleTest() throws InterruptedException{
-		Thread.sleep(5000);
+	public void verifyPageTitleTest(){
 		String loginPageTitle = loginPage.getPageTitle();
 		System.out.println("Login page title is " + loginPageTitle);
 		Assert.assertEquals(loginPageTitle, AppConstants.LOGIN_PAGE_TITLE, "Login page title is incorrect!");

@@ -34,17 +34,23 @@ public class ElementUtil extends BasePage {
 		 javaScriptUtil = new JavaScriptUtil(driver);
 	}
 	
+	/**
+	 *  title wait title
+	 * @param title
+	 * @return
+	 */
 	public boolean waitForTitlePresent(String title){
 		wait.until(ExpectedConditions.titleIs(title));
 		return true;	
 	}
+	
 	/**
 	 * to wait element
 	 * @param loctor
 	 * @return
 	 */
 	public boolean waitForElementPresent(By locator){
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));  // explicitWait == for element
 		return true;
 	}
 	
@@ -54,8 +60,8 @@ public class ElementUtil extends BasePage {
 	 * @return
 	 */
 	public boolean waitForelemetVisible(By locator){
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-		return true;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return true; //
 	}
 	
 	/**
@@ -79,9 +85,10 @@ public class ElementUtil extends BasePage {
 	public WebElement getElement(By locator){  // locater to connect the elements
 		WebElement element = null;
 		try {
+//			if (waitForElementPresent(locator));  // so getElement method will run with wait concept for every element
 			element = driver.findElement(locator);
 			if (highlightElement) {
-				javaScriptUtil.flash(element, driver);
+				javaScriptUtil.flash(element);
 			}
 		} catch (Exception e) {
 			System.out.println("<<<!!!   Some exception occured while getting the element    !!!>>>");

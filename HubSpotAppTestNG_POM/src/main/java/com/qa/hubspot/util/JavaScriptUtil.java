@@ -5,22 +5,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class JavaScriptUtil {
-	
-	
-	public JavaScriptUtil (WebDriver driver){
-		
+
+	WebDriver driver;
+
+	public JavaScriptUtil(WebDriver driver) {
+		this.driver = driver;
 	}
-	
-	public static void flash(WebElement element, WebDriver driver) {
+
+	public void flash(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		String bgcolor = element.getCssValue("backgroundColor");
-		for (int i = 0; i < 20; i++) {
-			changeColor("rgb(0,200,0)", element, driver);// 1
-			changeColor(bgcolor, element, driver);// 
+		for (int i = 0; i < 10; i++) {
+			changeColor("rgb(0,200,0)", element);// 1
+			changeColor(bgcolor, element);// 2
 		}
 	}
 
-	public static void changeColor(String color, WebElement element, WebDriver driver) {
+	private void changeColor(String color, WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
 
@@ -30,73 +31,87 @@ public class JavaScriptUtil {
 		}
 	}
 
-	public static void drawBorder(WebElement element, WebDriver driver) {
+	public void drawBorder(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.border='3px solid red'", element);
 	}
 
-	public static void generateAlert(WebDriver driver, String message) {
+	public void generateAlert(String message) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("alert('" + message + "')");
 	}
 
-	public static void clickElementByJS(WebElement element, WebDriver driver) {
+	public void clickElementByJS(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].click();", element);
 
 	}
 
-	public static void refreshBrowserByJS(WebDriver driver) {
+	public void refreshBrowserByJS() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("history.go(0)");
 	}
 
-	public static String getTitleByJS(WebDriver driver) {
+	public String getTitleByJS() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		String title = js.executeScript("return document.title;").toString();
 		return title;
 	}
 
-	public static String getPageInnerText(WebDriver driver) {
+	public String getPageInnerText() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		String pageText = js.executeScript("return document.documentElement.innerText;").toString();
 		return pageText;
 	}
 
-	public static void scrollPageDown(WebDriver driver) {
+	public void scrollPageDown() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
-	
-	public static void specificScrollPageDown(WebDriver driver) {
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("scroll(0, 500);");
-	}
 
-	public static void scrollIntoView(WebElement element, WebDriver driver) {
+	public void scrollIntoView(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	
-	public static String getBrowserInfo(WebDriver driver){
+
+	public String getBrowserInfo() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		String uAgent = js.executeScript("return navigator.userAgent;").toString();     
+		String uAgent = js.executeScript("return navigator.userAgent;").toString();
 		return uAgent;
 	}
-	
-	public static void sendKeysUsingJSWithID(WebDriver driver, String id, String value){
+
+	public void sendKeysUsingJSWithId(String id, String value) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("document.getElementById('" + id + "').value='"+value+"'");
+		js.executeScript("document.getElementById('" + id + "').value='" + value + "'");
 	}
-	
-	public static void sendKeysUsingJSWithClassName(WebDriver driver, String className, String value){
+
+	public void sendKeysUsingJSWithName(String name, String value) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("document.getElementsByClassName('" + className + "').value='"+value+"'");
+		js.executeScript("document.getElementByName('" + name + "').value='" + value + "'");
 	}
-	
-	public static void sendKeysUsingJSWithName(WebDriver driver, String name, String value){
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("document.getElementByName('" + name + "').value='"+value+"'");
+
+	public void checkPageIsReady() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// Initially bellow given if condition will check ready state of page.
+		if (js.executeScript("return document.readyState").toString().equals("complete")) {
+			System.out.println("Page Is loaded.");
+			return;
+		}
+
+		// This loop will rotate for 25 times to check If page Is ready after
+		// every 1 second.
+		// You can replace your value with 25 If you wants to Increase or
+		// decrease wait time.
+		for (int i = 0; i < 25; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+			// To check page ready state.
+			if (js.executeScript("return document.readyState").toString().equals("complete")) {
+				break;
+			}
+		}
 	}
 
 }

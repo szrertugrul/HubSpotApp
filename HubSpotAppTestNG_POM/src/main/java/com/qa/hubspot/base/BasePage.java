@@ -23,7 +23,7 @@ public class BasePage {
 	
 	public WebDriver initDriver(String browserName){
 		
-		highlightElement = prop.getProperty("highlight").equals("yes") ? true : false;
+		highlightElement = prop.getProperty("highlight").equals("yes") ? true : false;  // to get the key of highlight from config.properties file
 		
 		System.out.println("Browser name is " + browserName);
 		
