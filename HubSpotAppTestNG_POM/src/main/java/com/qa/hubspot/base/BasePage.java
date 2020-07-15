@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,16 +19,34 @@ public class BasePage {
 	
 	WebDriver driver;
 	Properties prop;
+	public static boolean highlightElement;
 	
 	public WebDriver initDriver(String browserName){
+		highlightElement = prop.getProperty("highlight").equals("yes") ? true : false;
+		
 		System.out.println("Browser name is " + browserName);
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			if (prop.getProperty("headless").equals("yes")) {
+				ChromeOptions co = new ChromeOptions();
+				co.addArguments("--headless");
+				driver = new ChromeDriver(co);
+			}else{
+				driver = new ChromeDriver();
+			}
+			
 		}else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			
+			if (prop.getProperty("headless").equals("yes")) {
+				FirefoxOptions fo = new FirefoxOptions();
+				fo.addArguments("--headless");
+				driver = new FirefoxDriver(fo);
+			}else{
+				driver = new FirefoxDriver();
+			}
+			
 		}else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.getInstance(SafariDriver.class).setup();
 			driver = new SafariDriver();
