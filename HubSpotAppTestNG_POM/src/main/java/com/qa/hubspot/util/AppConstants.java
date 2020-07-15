@@ -5,10 +5,10 @@ public class AppConstants {
 	
 	// Page Constants:
 	public final static String LOGIN_PAGE_TITLE = "HubSpot Login";
-	public final static String HOME_PAGE_TITLE = "Reports Dashboard";
-	public final static String HOME_PAGE_HEADER = "Marketing Dashboard";
+	public final static String HOME_PAGE_TITLE = "Dashboard Library";
+	public final static String HOME_PAGE_HEADER = "Dashboard Library";
 	
 	// Default Time:
-	public final static int DEFAULT_TIME = 20;
+	public static int DEFAULT_TIME = 20;
 
 }

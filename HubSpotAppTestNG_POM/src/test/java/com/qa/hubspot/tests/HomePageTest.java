@@ -35,7 +35,7 @@ public class HomePageTest {
 		userCred = new Credentials(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = loginPage.doLogin(userCred);
 		Thread.sleep(5000);
-		homePage.chooseAccount();		
+//		homePage.chooseAccount();		
 	}
 	
 	@Test(priority=1, description="Verify Home Page Title")	
@@ -55,7 +55,7 @@ public class HomePageTest {
 	@Test(priority=3, description=" Verify Account Name")
 	public void verifyLoggedInUserTest(){
 		String accountName= homePage.getLoggedInUserAccountName();
-		System.out.println(accountName);
+		System.out.println("Account name is: " + accountName);
 		Assert.assertEquals(accountName, "7TP LLC");
 	}
 	

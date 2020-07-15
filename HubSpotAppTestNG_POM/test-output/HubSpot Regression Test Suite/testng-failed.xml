@@ -4,16 +4,8 @@
   <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="HubSpot Functional Regression Test(failed)">
     <classes>
-      <class name="com.qa.hubspot.tests.LoginPageTest">
-        <methods>
-          <include name="login_invalidTestCase" invocation-numbers="0 1 2 3 4"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
       <class name="com.qa.hubspot.tests.HomePageTest">
         <methods>
-          <include name="verifyLoggedInUserTest"/>
           <include name="tearDown"/>
           <include name="verifyHomePageHeaderTest"/>
           <include name="verifyHomePageTitleTest"/>

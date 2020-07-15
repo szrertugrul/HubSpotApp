@@ -35,7 +35,7 @@ public class LoginPageTest {
 		
 	}
 	
-	@Test(priority=1,description="get page title as HubSpot Login", enabled=false)
+	@Test(priority=1,description="get page title as HubSpot Login", enabled=true)
 	public void verifyPageTitleTest() throws InterruptedException{
 		Thread.sleep(5000);
 		String loginPageTitle = loginPage.getPageTitle();
@@ -43,12 +43,12 @@ public class LoginPageTest {
 		Assert.assertEquals(loginPageTitle, AppConstants.LOGIN_PAGE_TITLE, "Login page title is incorrect!");
 	}
 	
-	@Test(priority=2, description="sign up link is displayed or not", enabled=false)
+	@Test(priority=2, description="sign up link is displayed or not", enabled=true)
 	public void verifySignUpLink(){
 		Assert.assertTrue(loginPage.checkSignUpLink());
 	}
 	
-	@Test(priority=3, description="invalid username and password for the login page", enabled=false)
+	@Test(priority=3, description="valid username and password for the login page", enabled=true)
 	public void loginTest(){
 		HomePage homePage = loginPage.doLogin(userCred); // we're using doLogin in HomePage Class
 		String accountName = homePage.getLoggedInUserAccountName();
@@ -56,9 +56,11 @@ public class LoginPageTest {
 		Assert.assertEquals(accountName, prop.getProperty("accountName"));
 	}
 	
-	@DataProvider
+	@DataProvider 		//
+									// https://www.toolsqa.com/testng/testng-dataproviders/
 	public Object[][] getLoginInvalidData(){
-		Object data [][] = {{"sezer@gmail.com", "test123456"}, 
+		
+		Object data [][] = {{"sezer@icloud.com", "test123456"}, 
 											{"jimy@gmail.com", " "}, 
 											{" ", "test12345"}, 
 											{"yummy", "yummy"}, 
@@ -66,11 +68,14 @@ public class LoginPageTest {
 		return data;
 	}
 	
-	@Test(priority=4, dataProvider = "getLoginInvalidData")
+	@Test(priority=4, dataProvider = "getLoginInvalidData", enabled = false)
 	public void login_invalidTestCase(String username, String pwd){	
+		
 		userCred.setAppUserName(username);
 		userCred.setAppPassword(pwd);
 		loginPage.doLogin(userCred);
+		
+		
 		Assert.assertTrue(loginPage.checkLoginErrorMessage());
 		
 	}

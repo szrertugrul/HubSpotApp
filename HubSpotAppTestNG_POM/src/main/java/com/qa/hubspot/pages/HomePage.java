@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
 	
 	// Locators
 	By header = By.id("//i18n-string[contains(text(),'Dashboard Library')]");
-	By chooseAccount = By.xpath("//span[contains(text(),'7TP LLC')]");
+//	By chooseAccount = By.xpath("//span[contains(text(),'7TP LLC')]");
 	By accountName = By.xpath("//span[contains(@class,'account-name')]");
 	
 	
@@ -29,9 +29,9 @@ public class HomePage extends BasePage {
 		return elementUtil.doGetPageTitle();
 	}
 	
-	public void chooseAccount(){
-		elementUtil.doClick(chooseAccount);
-	}
+//	public void chooseAccount(){
+//		elementUtil.doClick(chooseAccount);
+//	}
 	
 	public String getHomePageHeader(){
 		return elementUtil.doGetText(header);

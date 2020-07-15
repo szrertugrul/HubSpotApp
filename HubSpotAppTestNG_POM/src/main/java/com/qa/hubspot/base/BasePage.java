@@ -22,12 +22,14 @@ public class BasePage {
 	public static boolean highlightElement;
 	
 	public WebDriver initDriver(String browserName){
+		
 		highlightElement = prop.getProperty("highlight").equals("yes") ? true : false;
 		
 		System.out.println("Browser name is " + browserName);
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			
 			if (prop.getProperty("headless").equals("yes")) {
 				ChromeOptions co = new ChromeOptions();
 				co.addArguments("--headless");
@@ -50,12 +52,16 @@ public class BasePage {
 		}else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.getInstance(SafariDriver.class).setup();
 			driver = new SafariDriver();
+			
 		}else {
 			System.out.println("Browser name \"" + browserName + "\" is not found!");
 		}
+		
+		
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		
 		return driver;
 	}
 	
