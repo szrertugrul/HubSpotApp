@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.qa.hubspot.util.AppConstants;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
@@ -61,6 +63,7 @@ public class BasePage {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.get(prop.getProperty("url"));
 		
 		return driver;
 	}
