@@ -11,19 +11,19 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtil {
 
+	public static String TESTDATA_SHEET_PATH = "/Users/sezerertugrul/git/HubSpotApp/HubSpotAppTestNG_POM/src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
+	
 	public static Workbook book;  // org.apache.poi.ss.usermodel
 	public static Sheet sheet;  // org.apache.poi.ss.usermodel
-	
-	public static String TESTDATA_SHEET_DATA = "/Users/sezerertugrul/git/HubSpotApp/HubSpotAppTestNG_POM/src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
 	
 	public static Object[][] getTestData(String sheetName) {
 		
 		try {
-			FileInputStream ip = new FileInputStream(TESTDATA_SHEET_DATA);
-			book = WorkbookFactory.create(ip); // org.apache.poi.ss.usermodel
+			FileInputStream ip = new FileInputStream(TESTDATA_SHEET_PATH);  // to get and read data from the path above, 
+			book = WorkbookFactory.create(ip); // org.apache.poi.ss.usermodel  
 			sheet= book.getSheet(sheetName);
-			
-			Object data[][] = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+
+			Object data[][] = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()]; 			// first[] reads rows, second[] reads columns
 			
 			for(int i = 0; i< sheet.getLastRowNum(); i++) {	
 				for(int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
