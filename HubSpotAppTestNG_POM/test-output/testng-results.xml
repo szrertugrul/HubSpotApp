@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34661" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:44Z">
+  <suite name="Default suite" duration-ms="25931" started-at="2020-07-17T00:24:43Z" finished-at="2020-07-17T00:25:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34661" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:44Z">
+    <test name="Default test" duration-ms="25931" started-at="2020-07-17T00:24:43Z" finished-at="2020-07-17T00:25:09Z">
       <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="setUp" is-config="true" duration-ms="5693" started-at="2020-07-15T22:15:10Z" finished-at="2020-07-15T22:15:15Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@23fe1d71]" name="setUp" is-config="true" duration-ms="7395" started-at="2020-07-17T00:24:43Z" finished-at="2020-07-17T00:24:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="loginTest" duration-ms="28719" started-at="2020-07-15T22:15:15Z" description="valid username and password for the login page" finished-at="2020-07-15T22:15:44Z">
+        <test-method status="FAIL" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@23fe1d71]" name="loginTest" duration-ms="14606" started-at="2020-07-17T00:24:51Z" description="valid username and password for the login page" finished-at="2020-07-17T00:25:05Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [7TP LLC] but found [null]]]>
@@ -56,7 +56,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@685cb137]" name="tearDown" is-config="true" duration-ms="216" started-at="2020-07-15T22:15:44Z" finished-at="2020-07-15T22:15:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@23fe1d71]" name="tearDown" is-config="true" duration-ms="3903" started-at="2020-07-17T00:25:05Z" finished-at="2020-07-17T00:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

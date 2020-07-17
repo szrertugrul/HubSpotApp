@@ -14,8 +14,9 @@ public class HomePage extends BasePage {
 	
 	// Locators
 	By header = By.id("//i18n-string[contains(text(),'Dashboard Library')]");
-//	By chooseAccount = By.xpath("//span[contains(text(),'7TP LLC')]");
 	By accountName = By.xpath("//span[contains(@class,'account-name')]");
+	By mainContactsLink = By.id("nav-primary-contacts-branch");
+	By childContactsLink = By.id("nav-secondary-contacts");
 	
 	
 	// Constructor:
@@ -29,16 +30,25 @@ public class HomePage extends BasePage {
 		return elementUtil.doGetPageTitle();
 	}
 	
-//	public void chooseAccount(){
-//		elementUtil.doClick(chooseAccount);
-//	}
-	
 	public String getHomePageHeader(){
 		return elementUtil.doGetText(header);
 	}
 	
 	public String getLoggedInUserAccountName(){
 		return elementUtil.doGetText(accountName);
+	}
+	
+	public void clickOnContacts(){
+		elementUtil.waitForElementPresent(mainContactsLink);
+		elementUtil.doClick(mainContactsLink);
+		elementUtil.waitForElementPresent(childContactsLink);
+		elementUtil.doClick(childContactsLink);
+
+	}
+	
+	public ContactsPage goToContactsPage(){
+		clickOnContacts();
+		return new ContactsPage(driver);
 	}
 		
 	}

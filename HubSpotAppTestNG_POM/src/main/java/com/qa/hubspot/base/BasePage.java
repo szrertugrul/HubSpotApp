@@ -22,34 +22,23 @@ public class BasePage {
 	WebDriver driver;
 	Properties prop;
 	public static boolean highlightElement;
+	public OptionsManager optionsManager;
 	
 	public WebDriver initDriver(String browserName){
 		
 		highlightElement = prop.getProperty("highlight").equals("yes") ? true : false;  // to get the key of highlight from config.properties file
 		
+		optionsManager = new OptionsManager(prop);
+		
 		System.out.println("Browser name is " + browserName);
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			
-			if (prop.getProperty("headless").equals("yes")) {
-				ChromeOptions co = new ChromeOptions();
-				co.addArguments("--headless");
-				driver = new ChromeDriver(co);
-			}else{
-				driver = new ChromeDriver();
-			}
+			driver = new ChromeDriver(optionsManager.getChromeOptions());
 			
 		}else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			
-			if (prop.getProperty("headless").equals("yes")) {
-				FirefoxOptions fo = new FirefoxOptions();
-				fo.addArguments("--headless");
-				driver = new FirefoxDriver(fo);
-			}else{
-				driver = new FirefoxDriver();
-			}
+			driver = new FirefoxDriver(optionsManager.getFireFoxOptions());
 			
 		}else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.getInstance(SafariDriver.class).setup();
@@ -70,7 +59,19 @@ public class BasePage {
 	
 	public Properties initProperties(){
 		prop = new Properties();
-		String path = "/Users/sezerertugrul/git/HubSpotApp/HubSpotAppTestNG_POM/src/main/java/com/qa/hubspot/config/config.properties";
+		String path = null;
+		String env = null;
+		
+		try {
+			env = System.getProperty("env");
+			if (env.equals("qa")) {
+				path = "./src/main/java/com/qa/hubspot/config/config.qa.properties";                       //		.  = 	/Users/sezerertugrul/git/HubSpotApp/HubSpotAppTestNG_POM
+			}else if (env.equals("stg")) {
+				path = "./src/main/java/com/qa/hubspot/config/config.stg.properties";
+			}
+		} catch (Exception e) {
+			path = "./src/main/java/com/qa/hubspot/config/config.properties";
+		}
 		
 		try {
 			FileInputStream ip = new FileInputStream(path);      //
@@ -82,7 +83,4 @@ public class BasePage {
 		}
 		return prop;
 	}
-	
-	
-
 }
