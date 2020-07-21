@@ -1,25 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11819" started-at="2020-07-18T04:01:35Z" finished-at="2020-07-18T04:01:47Z">
+  <suite name="HubSpot Regression Test Suite" duration-ms="8742" started-at="2020-07-21T23:37:58Z" finished-at="2020-07-21T23:38:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11819" started-at="2020-07-18T04:01:35Z" finished-at="2020-07-18T04:01:47Z">
+    <test name="HubSpot Functional Regression Test" duration-ms="8742" started-at="2020-07-21T23:37:58Z" finished-at="2020-07-21T23:38:07Z">
       <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@3498ed]" name="setUp" is-config="true" duration-ms="4702" started-at="2020-07-18T00:01:35Z" finished-at="2020-07-18T00:01:39Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@78e67e0a]" name="setUp" is-config="true" duration-ms="8409" started-at="2020-07-21T19:37:58Z" finished-at="2020-07-21T19:38:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@3498ed]" name="verifyPageTitleTest" duration-ms="6859" started-at="2020-07-18T00:01:39Z" description="get page title as HubSpot Login" finished-at="2020-07-18T00:01:46Z">
+        <test-method status="FAIL" signature="verifyPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@78e67e0a]" name="verifyPageTitleTest" duration-ms="5" started-at="2020-07-21T19:38:06Z" description="get page title as HubSpot Login" finished-at="2020-07-21T19:38:06Z">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA[org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
+	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1702)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1677)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:620)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@3498ed]" name="tearDown" is-config="true" duration-ms="241" started-at="2020-07-18T00:01:46Z" finished-at="2020-07-18T00:01:47Z">
+        <test-method status="FAIL" signature="verifySignUpLink()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@78e67e0a]" name="verifySignUpLink" duration-ms="1" started-at="2020-07-21T19:38:06Z" description="sign up link is displayed or not" finished-at="2020-07-21T19:38:06Z">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA[org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
+	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1702)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1677)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:620)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpLink -->
+        <test-method status="FAIL" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@78e67e0a]" name="loginTest" duration-ms="3" started-at="2020-07-21T19:38:06Z" description="valid username and password for the login page" finished-at="2020-07-21T19:38:06Z">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA[org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
+	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1702)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1677)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:620)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@78e67e0a]" name="tearDown" is-config="true" duration-ms="262" started-at="2020-07-21T19:38:06Z" finished-at="2020-07-21T19:38:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- HubSpot Functional Regression Test -->
+  </suite> <!-- HubSpot Regression Test Suite -->
 </testng-results>
