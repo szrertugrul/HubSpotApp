@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-HubSpot_Regression_Test_Suite">
-              <span class="suite-name border-failed">HubSpot Regression Test Suite</span>
+              <span class="suite-name border-passed">HubSpot Regression Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-HubSpot_Regression_Test_Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,31 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 3 failed,   </span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-HubSpot_Regression_Test_Suite" class="hide-methods failed suite-HubSpot_Regression_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-HubSpot_Regression_Test_Suite -->
-                      <a href="#" panel-name="suite-HubSpot_Regression_Test_Suite" class="show-methods failed suite-HubSpot_Regression_Test_Suite"> (show)</a> <!-- show-methods failed suite-HubSpot_Regression_Test_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-HubSpot_Regression_Test_Suite" class="hide-methods passed suite-HubSpot_Regression_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-HubSpot_Regression_Test_Suite -->
+                      <a href="#" panel-name="suite-HubSpot_Regression_Test_Suite" class="show-methods passed suite-HubSpot_Regression_Test_Suite"> (show)</a> <!-- show-methods passed suite-HubSpot_Regression_Test_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-HubSpot_Regression_Test_Suite">
+                    <div class="method-list-content passed suite-HubSpot_Regression_Test_Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-HubSpot_Regression_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-HubSpot_Regression_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="verifyPageTitleTest">verifyPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-HubSpot_Regression_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="verifySignUpLink">verifySignUpLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-HubSpot_Regression_Test_Suite -->
+                    </div> <!-- method-list-content passed suite-HubSpot_Regression_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,9 +127,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-HubSpot_Regression_Test_Suite" class="panel HubSpot_Regression_Test_Suite">
-          <div class="suite-HubSpot_Regression_Test_Suite-class-failed">
+          <div class="suite-HubSpot_Regression_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.qa.hubspot.tests.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -138,10 +138,6 @@
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
-                  <div class="stack-trace">java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
-	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (valid username and password for the login page)                  </em>
                 </div> <!-- method-content -->
@@ -151,10 +147,6 @@
                   <a name="verifyPageTitleTest">
                   </a> <!-- verifyPageTitleTest -->
                   <span class="method-name">verifyPageTitleTest</span>
-                  <div class="stack-trace">java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
-	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (get page title as HubSpot Login)                  </em>
                 </div> <!-- method-content -->
@@ -164,16 +156,12 @@
                   <a name="verifySignUpLink">
                   </a> <!-- verifySignUpLink -->
                   <span class="method-name">verifySignUpLink</span>
-                  <div class="stack-trace">java.lang.NoSuchMethodError: org.testng.ITestNGMethod.getQualifiedName()Ljava/lang/String;
-	at com.qa.hubspot.listener.ExtentReportListener.onTestStart(ExtentReportListener.java:63)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (sign up link is displayed or not)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HubSpot_Regression_Test_Suite-class-failed -->
+          </div> <!-- suite-HubSpot_Regression_Test_Suite-class-passed -->
         </div> <!-- panel HubSpot_Regression_Test_Suite -->
         <div panel-name="test-xml-HubSpot_Regression_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -186,26 +174,13 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;HubSpot Regression Test Suite&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.qa.hubspot.listener.ExtentReportListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.hubspot.listener.pdfListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test name=&quot;HubSpot Functional Regression Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.hubspot.tests.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- HubSpot Functional Regression Test --&gt;
-  &lt;test name=&quot;HubSpot Functional Regression Test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.qa.hubspot.tests.LoginPageTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyPageTitleTest&quot;/&gt;
-          &lt;include name=&quot;setUp&quot;/&gt;
-          &lt;include name=&quot;verifySignUpLink&quot;/&gt;
-          &lt;include name=&quot;tearDown&quot;/&gt;
-          &lt;include name=&quot;loginTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.qa.hubspot.tests.LoginPageTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- HubSpot Functional Regression Test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- HubSpot Regression Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -218,9 +193,6 @@
             <ul>
               <li>
                 <span class="test-name">HubSpot Functional Regression Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">HubSpot Functional Regression Test(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -248,22 +220,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyPageTitleTest')
+data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 11423);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginTest')
+data.setCell(1, 1, 'verifyPageTitleTest')
 data.setCell(1, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(1, 3, 3);
+data.setCell(1, 3, 7593);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifySignUpLink')
 data.setCell(2, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(2, 3, 1);
+data.setCell(2, 3, 998);
 window.suiteTableData['HubSpot_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-HubSpot_Regression_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-HubSpot_Regression_Test_Suite">
               </div> <!-- times-div-HubSpot_Regression_Test_Suite -->
             </div> <!-- times-div -->
@@ -301,9 +273,21 @@ return data;
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">verifyPageTitleTest</span>
+                <span class="method-start">5394 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifySignUpLink</span>
+                <span class="method-start">13015 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">14014 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8475 ms</span>
+                <span class="method-start">25438 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

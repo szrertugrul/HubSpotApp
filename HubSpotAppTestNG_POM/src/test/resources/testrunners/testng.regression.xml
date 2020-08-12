@@ -4,12 +4,21 @@
 
 	<listeners>
 		<!-- <listener class-name="com.qa.hubspot.listeners.ScreenshotListener" /> -->
-		<!-- <listener class-name="com.qa.hubspot.listeners.TestAllureListener" /> -->
-    	<listener class-name="com.qa.hubspot.listener.ExtentReportListener" />
+		<listener class-name="com.qa.hubspot.listeners.TestAllureListener" />
+    	<!-- <listener class-name="com.qa.hubspot.listener.ExtentReportListener" /> -->
+    	<!-- <listener class-name="com.qa.hubspot.listener.pdfListener" /> -->
 	</listeners>
 
  <parameter name="browser" value="chrome"/>
   <test name="HubSpot Functional Regression Test">
+  
+<!--   <groups>
+   <run>
+      <include name="sanity"/>
+      <include name="regression"/>
+   </run>
+   </groups> -->
+   
     <classes>
       <!-- <class name="com.qa.hubspot.tests.HomePageTest"/> -->
       <class name="com.qa.hubspot.tests.LoginPageTest"/>

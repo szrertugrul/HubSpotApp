@@ -7,6 +7,8 @@ import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.util.ElementUtil;
 import com.qa.hubspot.util.JavaScriptUtil;
 
+import io.qameta.allure.Step;
+
 public class ContactsPage extends BasePage{
 	
 	WebDriver driver;
@@ -33,6 +35,7 @@ public class ContactsPage extends BasePage{
 		return elementUtil.doGetPageTitle();
 	}
 	
+	@Step("Create new contact with {0}, {1}, {2}, {3}") // Allure ??
 	public void createNewContact(String email, String firstName, String lastName, String jobTitle){
 		elementUtil.doClick(createContactButton);
 		elementUtil.doSendKey(emailBox, email);
