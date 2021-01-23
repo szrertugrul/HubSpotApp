@@ -14,7 +14,7 @@ import sun.security.action.GetBooleanAction;
 
 /**
  * 
- * @author sezerertugrul
+ * @author szrertugrul
  *
  */
 
@@ -69,7 +69,7 @@ public class ElementUtil extends BasePage {
 		try {   // to define specific catch blocks to create specific explanations
 			return driver.getTitle();
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured while getting the page title    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred while getting the page title    !!!>>>");
 		}
 		return null;
 	}
@@ -88,7 +88,7 @@ public class ElementUtil extends BasePage {
 				javaScriptUtil.flash(element);
 			}
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured while getting the element    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred while getting the element    !!!>>>");
 		}
 		return element;
 	}
@@ -101,7 +101,7 @@ public class ElementUtil extends BasePage {
 		try {
 			getElement(locator).click();
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured while clicking the element    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred while clicking the element    !!!>>>");
 		}
 	}
 	
@@ -116,7 +116,7 @@ public class ElementUtil extends BasePage {
 			element.clear(); // to clear the keys after sending
 			element.sendKeys(value);
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured while sending the value    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred while sending the value    !!!>>>");
 		}
 	}
 	
@@ -124,7 +124,7 @@ public class ElementUtil extends BasePage {
 		try {
 			return getElement(locator).isDisplayed();
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured for isDisplayed Method    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred for isDisplayed Method    !!!>>>");
 		}
 		return false;
 	}
@@ -133,7 +133,7 @@ public class ElementUtil extends BasePage {
 		try {
 			return getElement(locator).isSelected();
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured for isSelected Method     !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred for isSelected Method     !!!>>>");
 		}
 		return false;
 	}
@@ -142,7 +142,7 @@ public class ElementUtil extends BasePage {
 		try {
 			return getElement(locator).isEnabled();
 		} catch (Exception e) {
-			System.out.println("<<< Some exception occured for isEnabled Method    !!!>>>");
+			System.out.println("<<< Some exception occurred for isEnabled Method    !!!>>>");
 		}
 		return false;
 	}
@@ -151,7 +151,7 @@ public class ElementUtil extends BasePage {
 		try {
 			return getElement(locator).getText();
 		} catch (Exception e) {
-			System.out.println("<<<!!!   Some exception occured while getting text from page    !!!>>>");
+			System.out.println("<<<!!!   Some exception occurred while getting text from page    !!!>>>");
 		}
 		return null;
 	}
